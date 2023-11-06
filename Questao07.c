@@ -1,7 +1,7 @@
 /******************************************************************************
 
-Q7) Em um projeto para um jogo, é necessário cria um menu, crie um programa que exiba um menu com opções (1 - Novo jogo, 2 - Carregar jogo, 3 - Configurações).
- Solicite ao usuário que escolha uma opção e, utilizando o switch case, execute a funcionalidade correspondente à opção escolhida.
+Q7) Em um projeto para um jogo, Ã© necessÃ¡rio cria um menu, crie um programa que exiba um menu com opÃ§Ãµes (1 - Novo jogo, 2 - Carregar jogo, 3 - ConfiguraÃ§Ãµes).
+ Solicite ao usuÃ¡rio que escolha uma opÃ§Ã£o e, utilizando o switch case, execute a funcionalidade correspondente Ã  opÃ§Ã£o escolhida.
 
 *******************************************************************************/
 #include <stdio.h>
@@ -12,22 +12,37 @@ Q7) Em um projeto para um jogo, é necessário cria um menu, crie um programa que 
 int main () {
     setlocale(LC_ALL,"portuguese");
     
-    int tipo;
+    int menu;
+    int onibus;
+    int mapa;
+    int slot;
     
-	printf("           E-COMMERCE M7 MODAS     \n");
-    printf("Digite o codigo de acordo com a roupa escolhida : \n");
-    printf("1 - Camiseta  || 2 - Calça  || 3 - Sapato \n");
-	scanf("%d",&tipo);
+	printf("BEM-VINDO AO BUS DRIVER - SIMULADOR DE DIREÃ‡ÃƒO \n");
+    printf("                MENU  \n");
+    printf("1-NOVO JOGO \n");  
+	printf("2-CARREGAR JOGO \n");
+	printf("3-CONFIGURAÃ‡Ã•ES \n");
+	scanf("%d",&menu);
     
-    if(tipo == 1) 
-        printf("Camiseta = R$ 29,90 \n");
-    else 
-	if (tipo == 2) 
-    	printf("Calça = R$ 39,90 \n");
-	else
-	if (tipo == 3) 
-        printf("Sapato = R$ 49,90 \n");
-    
-    printf("Obrigado pela preferencia ! ");
+    switch(menu) {
+	case 1:
+		printf("ESCOLHA O ONIBUS : \n");
+		scanf("%d",&onibus);
+		printf("ESCOLHA O MAPA : \n");
+		scanf("%d",&mapa);
+		printf ("BOM JOGO ! \n");
+		break;
+	case 2:
+		printf("ESCOLHA O SLOT SALVO : \n");
+		scanf("%d",&slot);
+		printf("BOM JOGO ! \n");
+		break;
+	case 3:
+		printf("1-AUDIO \n");
+		printf("2-TAMANHO DA TELA \n");
+		printf("3-LOCAL DE ARMAZENAMENTO \n");
+		printf("4-OUTROS");
+		break;		
+	}
 	return 0;
 }
